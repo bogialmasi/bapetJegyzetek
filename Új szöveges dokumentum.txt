@@ -1,0 +1,16 @@
+dokumentációba a telepítés lépéseit le kell írni
+milyen előfeltételek vannak? pl node kell (verzió?)
+
+a felhasználói kézikönyvben mindent részletesen le kell írni
+éles helyzetben kell support pl telefonszám vagy FAQ, vizsgaremekben is lehet
+
+multer fájlfeltöltésre
+állománytípust meg kell adni
+
+nvm régebbi verziókat fel lehet telepíteni az alkalmazások futtatására
+úgy tud új verziót frissíteni, hogy az előző megmarad
+^ = korábbival nem, de későbbi verzióval az alkalmazás kompatibilis
+pl ^5.4.3 vagy 3.^4.5
+
+ES5 const c = require('c') - sync
+ES6 import c from 'c' - async

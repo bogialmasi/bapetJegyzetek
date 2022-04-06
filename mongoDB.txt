@@ -1,0 +1,28 @@
+mongod --dpbath="C:\Users\20g_almasib\mongoDatas"
+
+C:\Program Files\MongoDB\Server\5.0\bin\mongod --dbpath="C:\Users\20g_almasib\mongoDatas"
+
+--- CONNECT:
+MongoClient.connect(url, (err, client) =>{
+    if (err) {
+        console.log(err)
+        throw err
+    }
+    console.log(`MongoClient connected: + ${url}`)
+
+
+--- MÓDOSÍTÁSOK
+collection. 	mindegyiknél van One és Many !! JSON formátum szerint mindent
+	insertOne/insertMany	{key: "value value", key2: value2}
+	deleteOne/deleteMany	({key: "value"}, (err, result) =>{
+  			        if(err) throw err;
+    				console.log(`Törlés eredménye: ${result}`)})
+	updateOne({key: "value"}, {$set: {MÁSIKkey: ["a value itt tömb"]}})
+   				console.log(`Frissítés eredménye: ${result}`)
+
+
+--- LEKÉRÉS: lekér mindent
+    collection.find().toArray((err, result) =>{
+        if(err) throw err;
+        console.log(`Lekérdezés eredménye: ${result}`)
+    })

@@ -1,0 +1,18 @@
+*** a feladat kivitelezése az ötlettől a megvalósításig ***
+
+szereplők és igények - kik használják, tipizálni kell és megmondani hogy mihez van jogosultságuk. rendszergazda, dedikált felhasználók, ellenőrök akik jogosultságot néznek, regiszráció köteles-e
+useCase funkciólista - az igények hogyan elégíthetőek ki pl elfelejtett jelszó. 
+	a screeneket meghatározza (látványterv), ami itt meg van határozva az lesz itt lebontva hogy hogyan valósuljon meg 
+magas szintű rendszerterv - összeszedni a funkciókat amik kellenek és a köztük lévő kapcsolatot leírni (drawio lehet)
+Screenek - látványtervek (UX design) statikus html-ként meg kell csinálni
+modellek - 3.normálformátumú relációs adatbázisséma, mibe akarunk menteni
+kiválasztani az alkalmazásokat amivel üzemelni fog
+routing és middleware(algoritmusok) - milyen kérésre mit ad vissza, ezeket felvesszük, milyen adatok a request és response, next(middleware)
+	tartozik hozzá egy postman projekt amiben mindegyik útvonal kérés-válasz le van írva, tesztelni, kiexportálni
+implementáció
+tesztelés - az implementációt kell tesztelni (nodejs-hez jest)
+
+*** tesztelés ***
+funkciótesztelés: postman, postman route-okat dokumentálni kell és elmenteni
+	puppeteer (pptr.dev)
+az egész kódot le kelll fedni ahol kommunikáció van postmannel

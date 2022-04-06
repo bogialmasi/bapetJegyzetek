@@ -1,0 +1,34 @@
+Hitelesítés
+
+ORM (loki, mongoose) esetén egyszerű findOne kell
+ha nincs akkor for ciklus kell 
+
+Hitelesítés után többször nem akarunk hitelesíteni a szerver oldalon és a teljes munkamenet alatt
+
+
+----------------------------------------------------------------
+https://www.npmjs.com/package/express-session
+
+Session kezelés
+Munkafolyamat kialakítása - a back end feladata - ha bejelentkeztetünk vkit
+Az express keretrendszere express-session valósítja meg
+Ameddig a szerveren a munkafolyamat él, addig a felhasználó azonosítva van
+
+express-session
+session definíciót fel kell iratkoztatni az összes útvonalra, ez történik meg elsőként
+
+app use feliratkoztat az útvonalra
+app.use(session({
+    secret : '', --- uuid-val lehet csinálni (session azonosító) vagy bcryptjs-el
+    resave : false,
+    saveUninitalized: true
+}))
+a session kezelés automatikusan megtörténik
+
+-- init
+module.exports = (req, res, next) =>{
+    req.session.szamlalo = 0;
+    return next();
+}
+
+ha regenerate-elünk akkor új session jön létre, ha destroy akkor nem lesz több session
